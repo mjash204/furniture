@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeHome - Premium Furniture Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>LuxeHome</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Shop</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="menu-column">
+                                    <h3>Living Room</h3>
+                                    <a href="category.html?cat=sofas">Sofas</a>
+                                    <a href="category.html?cat=chairs">Chairs</a>
+                                    <a href="category.html?cat=tables">Coffee Tables</a>
+                                </div>
+                                <div class="menu-column">
+                                    <h3>Bedroom</h3>
+                                    <a href="category.html?cat=beds">Beds</a>
+                                    <a href="category.html?cat=wardrobes">Wardrobes</a>
+                                    <a href="category.html?cat=dressers">Dressers</a>
+                                </div>
+                                <div class="menu-column">
+                                    <h3>Dining</h3>
+                                    <a href="category.html?cat=dining-tables">Dining Tables</a>
+                                    <a href="category.html?cat=dining-chairs">Dining Chairs</a>
+                                    <a href="category.html?cat=cabinets">Cabinets</a>
+                                </div>
+                                <div class="menu-column">
+                                    <h3>Office</h3>
+                                    <a href="category.html?cat=desks">Desks</a>
+                                    <a href="category.html?cat=office-chairs">Office Chairs</a>
+                                    <a href="category.html?cat=shelves">Shelves</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="category.html" class="nav-link">Categories</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!-- Right Side Icons -->
+                <div class="nav-icons">
+                    <div class="search-container">
+                        <button class="icon-btn search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search furniture..." id="searchInput">
+                            <div class="search-suggestions"></div>
+                        </div>
+                    </div>
+                    
+                    <button class="icon-btn wishlist-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <span class="badge" id="wishlistCount">0</span>
+                    </button>
+                    
+                    <button class="icon-btn cart-btn" id="cartToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="badge" id="cartCount">0</span>
+                    </button>
+                    
+                    <button class="icon-btn theme-toggle" id="themeToggle">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <a href="cart.html" class="btn btn-primary btn-block">View Cart</a>
+            <a href="cart.html#checkout" class="btn btn-secondary btn-block">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Transform Your Space</h1>
+                <p class="hero-subtitle">Discover premium furniture that brings elegance and comfort to your home</p>
+                <div class="hero-buttons">
+                    <a href="category.html" class="btn btn-primary ripple">Shop Now</a>
+                    <a href="#featured" class="btn btn-outline">Explore Collection</a>
+                </div>
+            </div>
+            <div class="hero-3d">
+                <div class="product-3d-container">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800" alt="Modern Sofa" class="hero-product">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="featured-collections" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Collections</h2>
+                <p class="section-subtitle">Curated selections for every room</p>
+            </div>
+            
+            <div class="collections-grid">
+                <div class="collection-card tilt-effect">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="Living Room">
+                        <div class="collection-overlay">
+                            <h3>Living Room</h3>
+                            <a href="category.html?cat=living" class="btn btn-light">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card tilt-effect">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600" alt="Bedroom">
+                        <div class="collection-overlay">
+                            <h3>Bedroom</h3>
+                            <a href="category.html?cat=bedroom" class="btn btn-light">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card tilt-effect">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600" alt="Dining">
+                        <div class="collection-overlay">
+                            <h3>Dining Room</h3>
+                            <a href="category.html?cat=dining" class="btn btn-light">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card tilt-effect">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600" alt="Office">
+                        <div class="collection-overlay">
+                            <h3>Home Office</h3>
+                            <a href="category.html?cat=office" class="btn btn-light">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="products-section new-arrivals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">New Arrivals</h2>
+                <p class="section-subtitle">Fresh designs just for you</p>
+            </div>
+            
+            <div class="products-grid" id="newArrivals">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="products-section best-sellers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Best Sellers</h2>
+                <p class="section-subtitle">Customer favorites</p>
+            </div>
+            
+            <div class="products-grid" id="bestSellers">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Banner -->
+    <section class="parallax-banner">
+        <div class="parallax-content">
+            <h2>Summer Sale</h2>
+            <p>Up to 50% off on selected items</p>
+            <a href="category.html?sale=true" class="btn btn-primary ripple">Shop Sale</a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Newsletter</h2>
+                <p>Get exclusive deals and design inspiration delivered to your inbox</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary ripple">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LuxeHome</h3>
+                    <p>Premium furniture for modern living. Quality craftsmanship meets timeless design.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="category.html">Shop All</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=living">Living Room</a></li>
+                        <li><a href="category.html?cat=bedroom">Bedroom</a></li>
+                        <li><a href="category.html?cat=dining">Dining</a></li>
+                        <li><a href="category.html?cat=office">Office</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Pinterest</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Made by Webfused. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
